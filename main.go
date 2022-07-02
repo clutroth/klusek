@@ -93,7 +93,7 @@ func fetchEvents(ctx context.Context, display *C.Display, eventChan chan Event) 
 			if eventQueueSize(display) > 0 {
 				eventChan <- readKeyEventBlocking(display)
 			} else {
-				time.Sleep(100 * time.Millisecond)
+				time.Sleep(300 * time.Millisecond)
 			}
 
 		}
